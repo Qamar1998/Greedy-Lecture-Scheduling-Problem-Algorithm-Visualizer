@@ -29,7 +29,9 @@
   <button type="button" class="btn btn-default btn-sm"  onclick="window.location.href = 'https://www.youtube.com/watch?v=TV9VlHUR-Is&t=692s';">
     <span class="glyphicon glyphicon-expand">Expand</span>   </button>
 
-  <button type="button" class="btn btn-default btn-sm" (click)="toggleFullScreen()" ><span class="glyphicon glyphicon-fullscreen">Fullscreen</span>  </button>
+  <button type="button" class="btn btn-default btn-sm" (click)="toggleFullScreen()" >
+    <span class="glyphicon glyphicon-fullscreen">Fullscreen</span>  </button>
+
 </div>
 </div>
 
@@ -38,15 +40,9 @@
 <div id="nav2">
  <div class="logo" >Greedy  </div>
  <div class="buttons">
-  <button type="button" class="btn btn-default btn-sm" (click)="create()"><span class="glyphicon glyphicon-play"></span> Play </button>
+  <button type="button" class="btn btn-default btn-sm" (click)="create()">
+    <span class="glyphicon glyphicon-play"></span> Play </button> 
 
-
-  <form name="registrationForm">
-    <input type="range" name="ageInputName" id="ageInputId" value="24" min="1" max="100" oninput="range(this.value)" />
-
-
- </form>
- 
 </div> 
 </div>
     

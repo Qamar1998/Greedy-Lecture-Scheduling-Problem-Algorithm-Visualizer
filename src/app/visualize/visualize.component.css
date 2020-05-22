@@ -143,7 +143,7 @@ button {
 
 .not_coll {
 
-  background-color: yellow;
+  background-color: #505050;
   position: relative;
   animation: mymove infinite;
   animation-duration: 3s;
@@ -173,7 +173,7 @@ button {
   
 @keyframes mymove {
   from {top: 0px;}
-  to {top: 200px;}
+  to {top: 230px;}
 }
 
 
@@ -186,5 +186,4 @@ button {
   overflow: hidden;
   text-overflow: ellipsis;
   width: 14%;
-  
 }

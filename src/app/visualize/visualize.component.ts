@@ -10,7 +10,6 @@ class lecture {
 
   width : string ;
   collision : boolean  ; 
-
   constructor (){
     this.start_time = '0' ;
     this.finish_time = '0' ; 
@@ -56,20 +55,16 @@ export class VisualizeComponent implements OnInit {
     }
     this.bubbleSort() ; 
     console.log(this.lectures)
-   
     this.final_lectures = this.display_conflict (this.lectures);
     var timesRun = 0;
-
     var interval = setInterval(  ()=>{
       console.log(this.flag);
       timesRun += 1;
       this.flag++;
-
       if(timesRun === 9){
         clearInterval(interval);
     }
-
-    } , 2000 );
+    } , 2000);
 
   }
 
@@ -115,14 +110,6 @@ toggleFullScreen() {
   if(methodToBeInvoked) methodToBeInvoked.call(elem);
 }
 
-
-updateTextInput(val) {
-  (<HTMLInputElement>document.getElementById("myRange")).innerHTML = val;
-
-
-
-  console.log(val);
-}
 
 
 
