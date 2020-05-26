@@ -1,72 +1,65 @@
 body {
-   background-color: inherit;
-   color: #bbb;
-   height: 520px;
-   font-size: 17px;
-   font-style: inherit;
-   margin-left: 3%;
-   
+  background-color: inherit;
+  color: #bbb;
+  height: 520px;
+  font-size: 17px;
+  font-style: inherit;
+  margin-left: 3%;
 }
 
-#description{
+#description {
   margin-top: -3%;
-    border-collapse: collapse;
-    font-weight: 400;
-    font-size: 15px;
-    color: rgb(155, 153, 153);
-    width: 100%;
-      min-width: 10%;  
-      max-width: 100%;
-
+  border-collapse: collapse;
+  font-weight: 400;
+  font-size: 15px;
+  color: rgb(155, 153, 153);
+  width: 100%;
+  min-width: 10%;
+  max-width: 100%;
 }
 
 dd {
-    font-size: 14px;
+  font-size: 14px;
 }
 
 dl {
-    border-bottom: 0.9px groove rgb(155, 153, 153);
-
+  border-bottom: 0.9px groove rgb(155, 153, 153);
 }
 #desc {
-    width: 100%;
-    border: #bbb;
-    margin-top: 2%;
-
+  width: 100%;
+  border: #bbb;
+  margin-top: 2%;
 }
 
-
 table {
-    border-collapse: collapse;
-    border: 0.9px groove rgb(155, 153, 153);
-    font-weight: 700;
-    font-size: 15px;
-    color: rgb(155, 153, 153);
-    height: 268px;
-    margin-top: 3%;
+  border-collapse: collapse;
+  border: 0.9px groove rgb(155, 153, 153);
+  font-weight: 700;
+  font-size: 15px;
+  color: rgb(155, 153, 153);
+  height: 268px;
+  margin-top: 3%;
+}
 
-  }
-
- td {
+td {
   padding: 5px;
   padding-left: 8px;
   text-align: left;
- 
 }
 
 dt {
   margin-top: -3%;
 }
 th {
-
-    border-bottom: .5px solid rgb(155, 153, 153);
-    border-bottom-style: dashed;
-    padding: 5px;
-    text-align: left;  
+  border-bottom: 0.5px solid rgb(155, 153, 153);
+  border-bottom-style: dashed;
+  padding: 5px;
+  text-align: left;
 }
 
-tr:hover {background-color: #555555}
-
+tr:hover {
+  background-color: #555555;
+}
 
 #mySidenav a {
   position: absolute;
@@ -87,7 +80,10 @@ tr:hover {background-color: #555555}
 }
 
 #in_detail {
-  top: .1%;
-  background-color: #2196F3;
+  top: 0.1%;
+  background-color: #2196f3;
 }
 
+.highlight_C {
+  background-color: red;
+}

@@ -1,80 +1,140 @@
-   <!DOCTYPE html>
-      <html>
-          <head>
-            <meta name="viewport" content="width=device-width, initial-scale=1">
-            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-            <meta name="viewport" content="width=device-width, initial-scale=1">
-            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-            <meta name="viewport" content="width=device-width, initial-scale=1">
-            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-            <meta name="viewport" content="width=device-width, initial-scale=1">
-            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-        
-          </head>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  </head>
 
-<body>
-  
-<div id="nav1">
-  <div class="logo"> Interval Scheduling Algorithm   </div>
-  <div class="buttons">
+  <body>
+    <div id="nav1">
+      <div class="logo">Interval Scheduling Algorithm</div>
+      <div class="buttons">
+        <button
+          type="button"
+          class="btn btn-default btn-sm"
+          onclick="window.location.href = 'https://www.youtube.com/watch?v=TV9VlHUR-Is&t=692s';"
+        >
+          <span class="glyphicon glyphicon-expand">Expand</span>
+        </button>
 
-  <button type="button" class="btn btn-default btn-sm"  onclick="window.location.href = 'https://www.youtube.com/watch?v=TV9VlHUR-Is&t=692s';">
-    <span class="glyphicon glyphicon-expand">Expand</span>   </button>
-
-  <button type="button" class="btn btn-default btn-sm" (click)="toggleFullScreen()" >
-    <span class="glyphicon glyphicon-fullscreen">Fullscreen</span>  </button>
-
-</div>
-</div>
-
-
-
-<div id="nav2">
- <div class="logo" >Greedy  </div>
- <div class="buttons">
-  <button type="button" class="btn btn-default btn-sm" (click)="create()">
-    <span class="glyphicon glyphicon-play"></span> Play </button> 
-
-</div> 
-</div>
-    
-  <div class="row">
-     <div class="col-sm-4"> <app-desc> </app-desc> </div>
-      
-    <div class="col-sm-8" id= "generate"> <div id = "lectures_time">
-    <form class= "lectures_time">
-    <input name ="s_time_iput"  type="text" [(ngModel)]= "s_time_iput"  placeholder= "  Start lectures time">
-    <input name ="f_time_input" type="text"  [(ngModel)]= "f_time_input"  placeholder= "  Finish lectures time"> 
-    </form>
-
-    
-    </div> <div id="content" >
-      <div *ngIf = "lectures"  class = "a_b"> Sorted Lec</div>
-
-   <div class="contentInside" [style.width]= "item.width"   [class.not_coll]= "item.lec_flag == flag" 
-    [class.coll]= "item.collision && (item.lec_flag == flag)" *ngFor="let item of lectures">
-     {{item.start_time}} - {{item.finish_time}}
-</div>
-    
- <div style="color: aliceblue; width: 70px; height: 70px;" ></div>
- <div *ngIf = "lectures" class= "a_b"  > Compatible Lec </div>
-    <div id="content2"> 
-      <div   *ngFor="let item of final_lectures">
-        <div *ngIf= "item.lec_flag < flag"  class="contentInside" [style.width]="item.width"  
-        [class.coll]= "item.collision">
-        {{item.start_time}} - {{item.finish_time}}</div>
+        <button
+          type="button"
+          class="btn btn-default btn-sm"
+          (click)="toggleFullScreen()"
+        >
+          <span class="glyphicon glyphicon-fullscreen">Fullscreen</span>
+        </button>
+      </div>
     </div>
+
+    <div id="nav2">
+      <div class="logo">Greedy</div>
+      <div class="buttons">
+        <button
+          type="button"
+          class="btn btn-default btn-sm"
+          (click)="create(1)"
+        >
+          <span class="glyphicon glyphicon-play"></span> Play
+        </button>
+
+        <button
+          type="button"
+          class="btn btn-default btn-sm"
+          (click)="create(0)"
+        >
+          <span class="glyphicon glyphicon-cog"></span> Solver
+        </button>
+
+        <!---- <input
+          class="slider"
+          type="range"
+          id="volume"
+          name="volume"
+          min="1000"
+          max="9000"
+        />
+       -->
+      </div>
     </div>
+
+    <div class="row">
+      <div class="col-sm-4">
+        <app-desc [highlightedSteps]="highlightedSteps"></app-desc>
+      </div>
+
+      <div class="col-sm-8" id="generate">
+        <div id="lectures_time">
+          <form class="lectures_time">
+            <input
+              name="s_time_iput"
+              type="text"
+              [(ngModel)]="s_time_iput"
+              placeholder="  Start lectures time"
+            />
+            <input
+              name="f_time_input"
+              type="text"
+              [(ngModel)]="f_time_input"
+              placeholder="  Finish lectures time"
+            />
+          </form>
+        </div>
+        <div id="content">
+          <div *ngIf="lectures" class="a_b">Sorted Lec</div>
+
+          <div
+            class="contentInside"
+            [style.width]="item.width"
+            [class.not_coll]="item.lec_flag == flag && check == 1"
+            [class.coll]="item.collision && item.lec_flag == flag && check == 1"
+            *ngFor="let item of lectures"
+          >
+            {{ item.start_time }} - {{ item.finish_time }}
+          </div>
+
+          <div style="color: aliceblue; width: 70px; height: 70px;"></div>
+          <div *ngIf="lectures" class="a_b">Compatible Lec</div>
+          <div id="content2">
+            <div *ngFor="let item of final_lectures">
+              <div
+                *ngIf="item.lec_flag < flag || check == 0"
+                class="contentInside"
+                [style.width]="item.width"
+                [class.coll]="item.collision"
+              >
+                {{ item.start_time }} - {{ item.finish_time }}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    </div>
-    </div>
-    </body>
-    </html>
+  </body>
+</html>

@@ -1,110 +1,78 @@
-
-
 <body>
-    <div id="desc">
-        
-            <div id="description">
-              <div id="mySidenav" class="sidenav">
-                <a href="https://www.codesdope.com/course/algorithms-activity-selection/" id="in_detail">In-details</a>
-            </div>  
-            
-              <dl>  
-              <dt>Description</dt>
-                <dd >You have to enter a number of lectures with their start and finish times. 
-                 The goal is to find the maximum number of mutually compatible lectures. </dd>
-                </dl>
-                <dl>
-                <dt>Solution</dt>
-                <dd > Choosing the lecture which is going to finish first.
-                   Then check if it compatible and not overlap with the prev selected lecture 
-                </dd>
-                </dl>
-              
+  <div id="desc">
+    <div id="description">
+      <div id="mySidenav" class="sidenav">
+        <a
+          href="https://www.codesdope.com/course/algorithms-activity-selection/"
+          id="in_detail"
+          >In-details</a
+        >
+      </div>
 
-              <dt style="margin-top: -3%;"> Time Complexity :  &#8861; &#40; n log n  &#41; </dt>
+      <dl>
+        <dt>Description</dt>
+        <dd>
+          You have to enter a number of lectures with their start and finish
+          times. The goal is to find the maximum number of mutually compatible
+          lectures.
+        </dd>
+      </dl>
+      <dl>
+        <dt>Solution</dt>
+        <dd>
+          Choosing the lecture which is going to finish first. Then check if it
+          compatible and not overlap with the prev selected lecture
+        </dd>
+      </dl>
 
-            </div> 
+      <dt style="margin-top: -3%;">
+        Time Complexity : &#8861; &#40; n log n &#41;
+      </dt>
     </div>
+  </div>
 
-    <div >  
-      
-      
+  <div>
+    <table class="table1" style="width: 100%;">
+      <tr [class.highlight_C]="highlightedSteps[1]">
+        <th>1</th>
+        <td>sort the n requests in order of finish time</td>
+      </tr>
 
-      
-<table style="width:100%">
+      <tr [class.highlight_C]="highlightedSteps[2]">
+        <th>2</th>
+        <td>schedule = &#123; &#125;</td>
+      </tr>
 
-  <tr>
-    <th>1</th>
-    <td> sort the n requests in order of finish time</td>
-  </tr>
+      <tr [class.highlight_C]="highlightedSteps[3]">
+        <th>3</th>
+        <td>last_finish = 0</td>
+      </tr>
 
-  <tr>
-    <th>2</th>
-    <td>schedule = &#123;  &#125;
-    </td>
+      <tr [class.highlight_C]="highlightedSteps[4]">
+        <th>4</th>
+        <td>for i = 1 to n:</td>
+      </tr>
 
-  </tr>
+      <tr [class.highlight_C]="highlightedSteps[5]">
+        <th>5</th>
+        <td>&nbsp;&nbsp; if s &#40; i &#41; >= last_finish :</td>
+      </tr>
 
-  <tr>
-    <th>3</th>
-    <td>last_finish = 0 </td>
-  </tr>
+      <tr [class.highlight_C]="highlightedSteps[6]">
+        <th>6</th>
+        <td>&nbsp;&nbsp; &nbsp;&nbsp; Add i to schedule</td>
+      </tr>
 
-  <tr>
-    <th>4</th>
-    <td>for i = 1 to n:
-    </td>
-  </tr>
-
-  <tr>
-    <th>5</th>
-    <td>  &nbsp;&nbsp;  if s &#40; i &#41; >=  last_finish : </td>
-  </tr>
-
-  <tr>
-    <th>6</th>
-    <td>  &nbsp;&nbsp;  &nbsp;&nbsp;  Add i to schedule    </td>
-  </tr>
-
-  <tr>
-    <th>7</th>
-    <td>    &nbsp;&nbsp;  &nbsp;&nbsp;  last_finish = f &#40; i &#41;
-    </td>
-  </tr>
-
-  
-  <tr>
-    <td>8</td>
-    <td>    return schedule </td>
-  </tr>
-
-</table>
-        </div>
-        </body>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+      <tr [class.highlight_C]="highlightedSteps[7]">
+        <th>7</th>
+        <td>
+          &nbsp;&nbsp; &nbsp;&nbsp; last_finish = f &#40; i &#41;
+        </td>
+      </tr>
+      <tr [class.highlight_C]="highlightedSteps[8]">
+        <td>8</td>
+        <td>return schedule</td>
+      </tr>
+    </table>
+  </div>
+</body>
