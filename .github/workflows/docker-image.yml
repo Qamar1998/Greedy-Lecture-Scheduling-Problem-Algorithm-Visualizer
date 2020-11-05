@@ -17,6 +17,6 @@ jobs:
     - name: Login to DockerHub Registry
       run: echo ${{ secrets.DOCKERHUB_PASSWORD }}| docker login -u ${{ secrets.DOCKERHUB_USERNAME }} --password-stdin
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag wscv0592/docker-project-1:$(date +%s)
-    - name: Push the Docker image
-      run: docker push wscv0592/docker-project-1
+      run: docker build . --file Dockerfile --tag ir-img:$(date +%s)
+  #  - name: Push the Docker image
+   #   run: docker push wscv0592/docker-project-1
